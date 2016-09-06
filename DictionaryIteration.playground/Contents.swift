@@ -18,7 +18,12 @@
  */
 // write your code here
 
-
+var variable = [
+    "Nirvana" : "Nevermind",
+    "Blondie" : "Parallel Lines",
+    "The Kinks" : "Low Budget",
+    "The Beatles" : "Sgt. Pepper's Lonely Hearts Club Band"
+]
 
 
 
@@ -31,10 +36,10 @@
 // write your code here
 
 
+variable["The Pixies"] = "Doolittle"
 
 
-
-
+print(variable)
 
 
 /*: question3
@@ -44,7 +49,8 @@
 
 
 
-
+variable["The Kinks"] = nil
+print(variable)
 
 
 
@@ -55,8 +61,13 @@
  */
 let bandName = "Nirvana"
 // write your code here
+var bandBest = variable["Nirvana"]
 
 
+if  bandBest == bandBest {
+    print("\(bandName)'s top-sellng album was \(bandBest)")
+
+}
 
 
 
@@ -68,8 +79,9 @@ let bandName = "Nirvana"
  */
 // write your code here
 
-
-
+for (band, album) in variable {
+print("\(band)'s top selling album was \(album)")
+}
 
 
 
@@ -78,7 +90,7 @@ let bandName = "Nirvana"
 /*: question6
  ### 6. What type of data structure is returned when you iterate over a dictionary?
  */
-
+print("the data structure returned when a dictionary is iterated through is called a tuple")
 
 
 
@@ -89,9 +101,18 @@ let bandName = "Nirvana"
 /*: question7
  ### 7. Imagine every student in every grade in a high school took an exam. Each student got a letter grade based on their test results (A, B, C, D, and F). The results were averaged together per grade. How could you represent this mapping of grades to exam average?
  */
+var grades = [
+    "A" : 4.0,
+    "B" : 3.0,
+    "C" : 2.0,
+    "D" : 1.0,
+    "F" : 0.0
+    
+]
 
-
-
+for (letter, value) in grades {
+    print("\(value/3)")
+}
 
 
 
@@ -108,7 +129,12 @@ let bandName = "Nirvana"
 // write your code here
 
 
-
+let grade = [
+    9: "B",
+    10 : "A",
+    11 : "C",
+    12 : "B"
+]
 
 
 
@@ -121,7 +147,9 @@ let bandName = "Nirvana"
 
 
 
-
+for (grades, scores) in grade {
+    print("Grade \(grades) got \(scores)")
+}
 
 
 
@@ -130,7 +158,11 @@ let bandName = "Nirvana"
  ### 10. Find which grade got the highest score! Iterate through the dictionary to find the highest score, then print the message "Grade <Grade> got the highest score with <Score>!" to the console.
  */
 // write your code here
-
+for (grades, scores) in grade {
+    if scores == "A"{
+    print("Grade \(grades) got the highest score with \(scores)")
+}
+}
 
 
 
